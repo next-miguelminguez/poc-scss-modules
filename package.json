@@ -1,0 +1,19 @@
+{
+  "name": "uid-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir build --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nunjucks": "^3.2.3",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-nunjucks": "^2.2.2",
+    "sass": "^1.38.0"
+  }
+}
