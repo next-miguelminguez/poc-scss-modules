@@ -2,4 +2,7 @@
 
 import {navMenu} from './modules/header.js'
 
-navMenu();
+
+(() => {
+ navMenu();
+})()

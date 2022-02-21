@@ -1,2 +1,4 @@
-@import "./styles/family-opensans";
-@import "./styles/header";
+@use "./styles/generic" as generic;
+@use "./styles/header";
+@use "./styles/hero";
+

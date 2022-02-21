@@ -1,0 +1,30 @@
+@forward "./family-opensans";
+
+$bg-color: #dbdde3;
+$bg-gradient: linear-gradient(45deg, rgba(32,32,32,1) 0%, rgba(129,129,129,1) 50%, rgba(198,198,198,1) 100%);
+$bg-overlay: rgba(0, 0, 0, 0.7);
+
+$c-menu-font-color: #0d0c0d;
+$c-menu-font-color--hover: #484848;
+$c-menu__shadow: rgba(72,72,72,.5);
+
+
+$ambient-dark__color: #fff;
+
+$primary: #fec2eb;
+$primary--h: #32283b; 
+
+// ==========================================================================
+// typography
+// ==========================================================================
+$text--regular: 400;
+$text--semibold: 600;
+$text--bold: 700;
+
+$text-size-xxxl: 3.5rem;      // 56px 
+$text-size-xxl: 2rem;         // 32px 
+$text-size-xl: 1.5rem;        // 24px 
+$text-size-l: 1.25rem;        // 20px 
+$text-size-m: 1rem;           // 16px 
+$text-size-s: .9rem;          // ?px
+$text-size-xs: .7rem;          // 11.2px 

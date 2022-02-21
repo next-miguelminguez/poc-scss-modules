@@ -1,41 +1,10 @@
-$bg-color: #dbdde3;
-$c-menu-font-color: #0d0c0d;
-$c-menu-font-color--hover: #484848;
-$c-menu__shadow: rgba(72,72,72,.5);
-// ==========================================================================
-// typography
-// ==========================================================================
-
-$text--regular: 400;
-$text--semibold: 600;
-$text--bold: 700;
-
-$text-size-xxxl: 3.5rem;      /* 56px */
-$text-size-xxl: 2rem;       /* 32px */
-$text-size-xl: 1.5rem;       /* 24px */
-$text-size-l: 1.25rem;       /* 20px */
-$text-size-m: 1rem;          /* 16px */
-$text-size-s: .7rem;          /* 11.2px */
-
-html {
-  min-height: 100vh;
-  width: 100%;
-  line-height: 1.4;
-  font-family:  'Open Sans', sans-serif;
-}
-
-body {
-  height: 100%;
-  background-color: $bg-color;
-  margin: 0;
-}
-
-
+@use "./styles/config" as conf;
 
 .header {
   width: 100%;
   //position: fixed;
   padding: .5rem 0;
+  box-sizing: border-box;
 }
 
 .grid {
@@ -70,13 +39,12 @@ body {
   margin: 0;
   padding: 0;
   
-  /*height: 0;*/
+  // height: 0; 
   overflow: hidden;
   flex-direction: column;
   background-color: transparent;
   min-width: 100%;
   text-align: center;
-  
 }
 
 .c-menu__item {
@@ -86,18 +54,18 @@ body {
 
 
 .c-menu__link {
-  color: $c-menu-font-color;
-  font-weight: $text--semibold; 
-  font-size: $text-size-l;
+  color: conf.$c-menu-font-color;
+  font-weight: conf.$text--semibold; 
+  font-size: conf.$text-size-s;
   line-height: 1.375;
   
   text-decoration: none;
+  letter-spacing: -.01em;
   
   &:hover {
-    color: $c-menu-font-color--hover;
+    color: conf.$c-menu-font-color--hover;
   }
 }
-
 
 .c-menu__action {
   border: none;
@@ -113,29 +81,29 @@ body {
 
 
 .c-menu__burguer {
-  background-color: $c-menu-font-color;
-  border-radius: 2px;
+  background-color: conf.$c-menu-font-color;
+  border-radius: 0px;
   width: 2rem;
-  height: .25rem;
+  height: .15rem;
   position: relative;
   
   &::after {
     content: '';
     background-color: inherit ;
-    border-radius: 2px;
+    border-radius: 0px;
     display: block;
     width: 2rem;
-    height: .25rem;
+    height: .15rem;
     position: absolute;
     top: 0.5rem;
   }
   &::before {
     content: '';
     background-color: inherit ;
-    border-radius: 2px;
+    border-radius: 0px;
     display: block;
     width: 2rem;
-    height: .25rem;
+    height: .15rem;
     position: absolute;
     top: -0.5rem;
   }
@@ -182,55 +150,6 @@ body {
     }
   
 
-// 
-// .c-menu__burguer:before {
-//   content: '';
-//   background-color: red; // inherit ;
-//   border-radius: 2px;
-//   display: block;
-//   width: 2rem;
-//   height: .25rem;
-//   position: absolute;
-//   top: -0.5rem;
-// 
-//   // animation: burger-before 0.8s both;
-//   // animation-direction: normal;
-// }
-// 
-// .c-menu__burguer:after {
-//   content: '';
-//   background-color: blue; // inherit ;
-//   border-radius: 2px;
-//   display: block;
-//   width: 2rem;
-//   height: .25rem;
-//   position: absolute;
-//   top: 0.5rem;
-// 
-//   // animation: burger-after 0.8s both;
-//   // animation-direction: normal;
-// }
-// 
-// .is-open {
-// 
-//   .c-menu__burguer {
-//     animation: burger-center 0.8s forwards;
-//     //animation: burger-center 0.8s forwards;
-//     //animation-direction: reverse;
-//   }
-// 
-//   .c-menu__burguer:before {
-//     animation: burger-before 0.8s forwards;
-//     //animation-direction: reverse;
-//   }
-// 
-//   .c-menu__burguer:after {
-//     animation: burger-after 0.8s forwards;
-//     //animation-direction: reverse;
-//   }  
-// 
-// }
-
 
 
 //
@@ -252,12 +171,12 @@ body {
   .c-menu__burguer {
     display: none;
   }
+  
   .c-menu__list {
     height: auto;
     max-height: 100%;
     flex-direction: row;
     align-self: center;
-    
   }
   
   .nav {
@@ -268,18 +187,12 @@ body {
     max-height: 100%;
     grid-column: 3/4;
   }
-
-  .c-menu__list {
-
-  }
 }
 
 //
 //  Small Desktop
 // ====================================
 @media screen and (min-width: 75rem) { 
-
-   
 }
 
 //
@@ -290,45 +203,3 @@ body {
 
 
 
-
-
-
-// 
-// 
-// @keyframes burger-before {
-// 
-//   0% {
-//     transform: translateY(0px) rotate(0deg);
-//   }
-//   50% {
-//     transform: translateY(8px) rotate(0deg);
-//   }
-//   100% {
-//     transform: translateY(8px) rotate(90deg);
-//   }
-// }
-// 
-// @keyframes burger-center {
-//     0% {
-//         transform: translateY(0px) rotate(0deg);
-//     }
-//     50% {
-//         transform: translateY(0px) rotate(0deg);
-//     }
-//     100% {
-//         transform: translateY(0px) rotate(135deg);
-//     }
-// }
-// 
-// 
-// @keyframes burger-after {
-//   0% {
-//     transform: translateY(0px) rotate(0deg);
-//   }
-//   50% {
-//     transform: translateY(-8px) rotate(0deg);
-//   }
-//   100% {
-//     transform: translateY(-8px) rotate(90deg);
-//   }
-// }
